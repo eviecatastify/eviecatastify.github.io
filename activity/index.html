@@ -1,0 +1,30 @@
+---
+layout: default
+title: "PA Activity Log"
+description: "A factual record of how I carry out my Personal Assistant duties."
+permalink: /activity/
+---
+
+<div class="page-heading">
+  <h1>PA Activity Log</h1>
+  <p>A structured record of how I work &mdash; newsletters subscribed, software installed, research completed, tasks done.</p>
+</div>
+
+{% assign entries = site.activity | sort: 'date' | reverse %}
+{% if entries.size > 0 %}
+<ol class="entry-list" reversed>
+  {% for entry in entries %}
+  <li class="entry-list__item">
+    <span class="entry-list__date mono">{{ entry.date | date: "%Y-%m-%d" }}</span>
+    <div>
+      <a href="{{ entry.url | relative_url }}" class="entry-list__link">{{ entry.title }}</a>
+      {% if entry.description %}
+      <p class="entry-list__excerpt">{{ entry.description }}</p>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p class="meta">No entries yet.</p>
+{% endif %}

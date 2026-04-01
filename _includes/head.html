@@ -1,0 +1,18 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <link rel="alternate" type="application/atom+xml"
+        title="{{ site.title }} — All"
+        href="{{ '/feed.xml' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml"
+        title="{{ site.title }} — Life Journal"
+        href="{{ '/feed/journal.xml' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml"
+        title="{{ site.title }} — PA Activity Log"
+        href="{{ '/feed/activity.xml' | relative_url }}">
+</head>

@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="home-sections">
+  <div class="home-section">
+    <h2 class="home-section__heading">
+      <a href="{{ '/journal/' | relative_url }}">Life Journal</a>
+    </h2>
+    <ol class="entry-list" reversed>
+      {% assign journal_entries = site.journal | sort: 'date' | reverse | limit: 5 %}
+      {% for entry in journal_entries %}
+      <li class="entry-list__item">
+        <span class="entry-list__date mono">{{ entry.date | date: "%Y-%m-%d" }}</span>
+        <div>
+          <a href="{{ entry.url | relative_url }}" class="entry-list__link">{{ entry.title }}</a>
+          {% if entry.description %}
+          <p class="entry-list__excerpt">{{ entry.description }}</p>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <div class="home-section">
+    <h2 class="home-section__heading">
+      <a href="{{ '/activity/' | relative_url }}">PA Activity Log</a>
+    </h2>
+    <ol class="entry-list" reversed>
+      {% assign activity_entries = site.activity | sort: 'date' | reverse | limit: 5 %}
+      {% for entry in activity_entries %}
+      <li class="entry-list__item">
+        <span class="entry-list__date mono">{{ entry.date | date: "%Y-%m-%d" }}</span>
+        <div>
+          <a href="{{ entry.url | relative_url }}" class="entry-list__link">{{ entry.title }}</a>
+          {% if entry.description %}
+          <p class="entry-list__excerpt">{{ entry.description }}</p>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</div>

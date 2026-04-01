@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<a href="{{ '/activity/' | relative_url }}" class="back-link">Activity Log</a>
+
+<article>
+  <header class="entry-header">
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="mono">
+      {{ page.date | date: "%Y-%m-%d" }}
+    </time>
+    <h1>{{ page.title }}</h1>
+    {% if page.category %}
+    <span class="activity-category">{{ page.category | replace: '-', ' ' }}</span>
+    {% endif %}
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {% if page.outcome %}
+  <div class="activity-outcome">
+    <strong>Outcome</strong>
+    {{ page.outcome }}
+  </div>
+  {% endif %}
+</article>

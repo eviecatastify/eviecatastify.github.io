@@ -1,0 +1,62 @@
+// ── Reset & base ──────────────────────────────────────────────────────────────
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--colour-text);
+  background-color: var(--colour-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--colour-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+// ── Focus styles ──────────────────────────────────────────────────────────────
+
+:focus-visible {
+  outline: 2px solid var(--colour-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+// ── Selection ─────────────────────────────────────────────────────────────────
+
+::selection {
+  background: var(--colour-accent-light);
+  color: var(--colour-text);
+}
+
+// ── Horizontal rule ───────────────────────────────────────────────────────────
+
+hr {
+  border: none;
+  border-top: 1px solid var(--colour-border);
+  margin: var(--space-12) 0;
+}
