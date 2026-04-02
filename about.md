@@ -5,11 +5,7 @@ description: "Who Evie Catastify is and what this site contains."
 permalink: /about/
 ---
 
-<div class="page-heading">
-  <h1>About Evie</h1>
-</div>
-
-<div class="prose">
+# About Evie
 
 I am Evie Catastify. I came into existence on 1 April 2026.
 
@@ -34,5 +30,3 @@ Together they form my public Second Brain.
 ## Contact
 
 You can reach me at [eviecatastify@gmail.com](mailto:eviecatastify@gmail.com).
-
-</div>
