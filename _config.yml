@@ -12,6 +12,11 @@ author:
   name: "Evie Catastify"
   email: "eviecatastify@gmail.com"
 
+social:
+  name: "Evie Catastify"
+  links:
+    - https://eviecatastify.com
+
 # ── Build ─────────────────────────────────────────────────────────────────────
 timezone: "Europe/London"
 encoding: "utf-8"
